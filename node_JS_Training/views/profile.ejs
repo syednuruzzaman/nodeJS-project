@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learing node JS Home Page</title>
+    <style>
+        h2{ font-size: 25px; text-transform: uppercase;}
+        p, li{ font-size: 20px }  
+        
+
+    </style>
+</head>
+<body style='background-color:lightskyblue'>
+    <h1 style='font-size: 36px; color: white; text-align:center'>EJS Page</h1>
+    <!--Geting person params value from the exress.js file-->
+    
+    <p >This is EJS page for <%= person %></p>
+    <p ><strong>AGE: </strong> <%= data.age %></p>
+    <p ><strong>Name: </strong> <%= data.name %></p>
+    <p ><strong>JOB: </strong> <%= data.job %></p>
+    <h2>Hobbies</h2>
+    <ul>
+        <% data.hobbies.forEach(function(item){ %>
+            <li><%= item %></li>
+
+        <% }); %> 
+    </ul>
+    
+</body>
+</html>
